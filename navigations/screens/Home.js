@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, FlatList } from "react-native";
 import { Card, IconButton } from "react-native-paper";
 
-export default function Home() {
+export default function Home({navigation}) {
   const cards = [
     {
       id: 1,
@@ -36,7 +36,7 @@ export default function Home() {
           color="#000"
           size={30}
           style={styles.iconButton}
-          onPress={() => handleAddDetails(item.id)}
+          onPress={() => navigation.navigate('Property')}
         />
       </Card.Content>
     </Card>
@@ -45,6 +45,7 @@ export default function Home() {
   const handleAddDetails = (itemId) => {
     // Implement the action to add details for the selected card
     console.log(`Add details for card with id: ${itemId}`);
+    navigation.navigate('PropertyPage', { properties });
   };
 
   return (
