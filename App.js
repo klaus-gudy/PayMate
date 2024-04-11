@@ -1,5 +1,5 @@
 import "react-native-gesture-handler";
-import { StyleSheet, Text, View , Platform} from 'react-native';
+import { StyleSheet, Text, View , Platform,StatusBar} from 'react-native';
 import Navigation from "./navigations/Navigation";
 
 export default function App() {
